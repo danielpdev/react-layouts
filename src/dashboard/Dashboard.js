@@ -4,26 +4,27 @@ import React from "react";
 export default class Dashboard extends React.Component {
   render() {
     const links = this.props.layouts.reduce((links, Current) => {
-      const Component = () => <Current />;
-      const element = (
-        <span key="">
-          <Link to={`/${Component().type.name}`}>{`${
-            Component().type.name
-          }`}</Link>
-          <Route
-            exact
-            path={`/${Component().type.name}`}
-            component={Component}
-          />
+      links.push(
+        <span key={Current.type.name}>
+          <Link to={`/${Current.type.name}`}>{`${Current.type.name}`}</Link>
         </span>
       );
-      links.push(element);
       return links;
+    }, []);
+
+    const routes = this.props.layouts.reduce((routes, current) => {
+      routes.push(
+        <Route exact path={`/${current.type.name}`} render={() => current} />
+      );
+      return routes;
     }, []);
 
     return (
       <Router>
-        <div>{links}</div>
+        <div>
+          {links}
+          <div>{routes}</div>
+        </div>
       </Router>
     );
   }
