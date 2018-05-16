@@ -1,1 +1,36 @@
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1em;
+  grid-auto-rows: minmax(100px, auto);
+  align-items: center;
+}
 
+.container > div {
+  background: #eee;
+}
+
+.container > div:nth-child(even) {
+  background: #ddd;
+}
+.nested {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1 / 3;
+}
+
+.nested > div {
+  background: #eee;
+}
+
+.nested > div:first-child {
+  align-self: end;
+}
+
+.nested > div:last-child {
+  justify-self: end;
+}
+
+.nested > div:nth-child(even) {
+  background: #ded;
+}

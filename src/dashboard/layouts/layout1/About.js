@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import "./styles.css";
 
 export default () => (
   <div>
     <header>
-      <div class="container">
+      <div className="container">
         <div id="branding">
           <h1>
-            <span class="hightlight">Simple</span> branding logo
+            <span className="hightlight">Simple</span> branding logo
           </h1>
         </div>
         <nav>
@@ -15,7 +16,7 @@ export default () => (
             <li>
               <Link to={`home`}>Home</Link>
             </li>
-            <li class="current">
+            <li className="current">
               <Link to={`about`}>About</Link>
             </li>
           </ul>
@@ -24,11 +25,11 @@ export default () => (
     </header>
     <main>
       <section id="newsletter">
-        <div class="container">
+        <div className="container">
           <h1> subscribe to our news leter </h1>
           <form>
             <input type="email" placeholder="enter email" />
-            <button type="submit" class="button_1">
+            <button type="submit" className="button_1">
               Subscribe
             </button>
           </form>
@@ -36,9 +37,9 @@ export default () => (
       </section>
 
       <section id="main">
-        <div class="container">
+        <div className="container">
           <article id="main-col">
-            <h1 class="page-title">About Us</h1>
+            <h1 className="page-title">About Us</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               varius auctor lacus nec feugiat. Phasellus sit amet ex ipsum.
@@ -48,7 +49,7 @@ export default () => (
               Curabitur maximus metus nec metus pretium viverra at et orci.
               Integer hendrerit ante ut placerat cursus.
             </p>
-            <p class="dark">
+            <p className="dark">
               Aliquam eget pharetra diam. Nulla placerat lorem at turpis tempor,
               vel ultrices dui tincidunt. Proin quis egestas lorem. Mauris
               vehicula lectus odio, sit amet dictum justo feugiat a. Praesent id
@@ -62,7 +63,7 @@ export default () => (
           </article>
 
           <aside id="sidebar">
-            <div class="dark">
+            <div className="dark">
               <h3>What We Do</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec

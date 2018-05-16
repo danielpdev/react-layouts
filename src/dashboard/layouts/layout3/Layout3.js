@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Home from "./Home";
 
-export default class Layout2 extends Component {
+export default class Layout3 extends Component {
   render() {
     return (
       <Router>
